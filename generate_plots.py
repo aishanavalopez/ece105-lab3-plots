@@ -144,12 +144,15 @@ def plot_boxplot(sensor_a, sensor_b, ax):
 
 
 def main():
-    """Generate sensor data and produce all visualizations in one figure.
+    """Generate all plots and save them to sensor_analysis.png.
+
+    Parameters
+    ----------
+    None
 
     Returns
     -------
     None
-        Saves the figure 'sensor_plots.png' to the current directory.
     """
     sensor_a, sensor_b, timestamps = generate_data(seed=42)
 
@@ -160,7 +163,7 @@ def main():
     plot_boxplot(sensor_a, sensor_b, axes[2])
 
     fig.tight_layout()
-    fig.savefig("sensor_plots.png", dpi=300)
+    fig.savefig("sensor_analysis.png", dpi=300)
 
 if __name__ == "__main__":
     main()
